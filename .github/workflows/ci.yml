@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  # Run on every push to main and on every pull request targeting main
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  # When two runs are initiated on the same ref (such as two successive pushes),
+  # the previous run that is still in progress will be canceled.
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  # The job token has read-only access to the repository.
+  # Even if a dependency or hook were to be compromised,
+  # the job couldn't write to the repo, post comments, or modify releases.
+  # It's the principle of least privilege, GitHub's explicit best practice.
+  contents: read
+
+jobs:
+  reproducibility:
+    # The README promises that a fresh clone runs end-to-end on the
+    # synthetic sample alone. This job is that promise, kept on every push.
+    runs-on: ubuntu-latest
+    # A stuck job terminates after 20 minutes rather than the default 6 hours.
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Notebook hygiene
+        # Runs pre-commit on all files.
+        # nbstripout removes any output found in committed notebooks,
+        # and `git diff --exit-code` fails the job if changes are detected.
+        # This ensures dirty notebooks can't make it into the repository.
+        run: |
+          pre-commit run --all-files
+          git diff --exit-code
+
+      - name: Sample determinism
+        # Same seed, same output: regenerating the sample must reproduce
+        # the committed files byte for byte, or the generator drifted.
+        run: |
+          python scripts/generate_data_sample.py
+          git diff --exit-code data_sample/
+
+      - name: Data contract tests
+        # The schemas and invariants the notebook relies on, pinned as
+        # tests (tests/test_data_contract.py). They run before the slower
+        # notebook step so a malformed sample fails fast.
+        run: pytest
+
+      - name: Execute notebook on the synthetic sample
+        # The notebook runs end-to-end in CI.
+        # Since the `data/` directory is absent in the CI environment,
+        # we test the exact same paths that users encounter after cloning the repository.
+        # Notebook outputs are written to a temporary runner directory and never persist in the workspace.
+        run: |
+          jupyter nbconvert --to notebook --execute notebooks/01_coverage_gap_analysis.ipynb --output-dir "${RUNNER_TEMP}" --output executed.ipynb
