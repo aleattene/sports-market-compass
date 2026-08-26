@@ -1,0 +1,108 @@
+region_id,region_name,province_id,province_name,province_abbr,entities_total
+13,Abruzzo,69,Chieti,CH,144
+13,Abruzzo,66,L'Aquila,AQ,69
+13,Abruzzo,68,Pescara,PE,2952
+13,Abruzzo,67,Teramo,TE,308
+17,Basilicata,77,Matera,MT,542
+17,Basilicata,76,Potenza,PZ,611
+18,Calabria,79,Catanzaro,CZ,725
+18,Calabria,78,Cosenza,CS,221
+18,Calabria,101,Crotone,KR,168
+18,Calabria,80,Reggio di Calabria,RC,2436
+18,Calabria,102,Vibo Valentia,VV,804
+15,Campania,64,Avellino,AV,148
+15,Campania,62,Benevento,BN,526
+15,Campania,61,Caserta,CE,140
+15,Campania,63,Napoli,NA,624
+15,Campania,65,Salerno,SA,431
+8,Emilia-Romagna,37,Bologna,BO,630
+8,Emilia-Romagna,38,Ferrara,FE,636
+8,Emilia-Romagna,40,Forlì-Cesena,FC,174
+8,Emilia-Romagna,36,Modena,MO,156
+8,Emilia-Romagna,34,Parma,PR,430
+8,Emilia-Romagna,33,Piacenza,PC,891
+8,Emilia-Romagna,39,Ravenna,RA,319
+8,Emilia-Romagna,35,Reggio nell'Emilia,RE,333
+8,Emilia-Romagna,99,Rimini,RN,887
+6,Friuli-Venezia Giulia,31,Gorizia,GO,145
+6,Friuli-Venezia Giulia,93,Pordenone,PN,250
+6,Friuli-Venezia Giulia,32,Trieste,TS,179
+6,Friuli-Venezia Giulia,30,Udine,UD,563
+12,Lazio,60,Frosinone,FR,1018
+12,Lazio,59,Latina,LT,188
+12,Lazio,57,Rieti,RI,454
+12,Lazio,58,Roma,RM,188
+12,Lazio,56,Viterbo,VT,547
+7,Liguria,10,Genova,GE,255
+7,Liguria,8,Imperia,IM,354
+7,Liguria,11,La Spezia,SP,300
+7,Liguria,9,Savona,SV,543
+3,Lombardia,16,Bergamo,BG,659
+3,Lombardia,17,Brescia,BS,288
+3,Lombardia,13,Como,CO,523
+3,Lombardia,19,Cremona,CR,959
+3,Lombardia,97,Lecco,LC,403
+3,Lombardia,98,Lodi,LO,308
+3,Lombardia,20,Mantova,MN,138
+3,Lombardia,15,Milano,MI,299
+3,Lombardia,108,Monza e della Brianza,MB,896
+3,Lombardia,18,Pavia,PV,413
+3,Lombardia,14,Sondrio,SO,156
+3,Lombardia,12,Varese,VA,1490
+11,Marche,42,Ancona,AN,244
+11,Marche,44,Ascoli Piceno,AP,100
+11,Marche,109,Fermo,FM,433
+11,Marche,43,Macerata,MC,195
+11,Marche,41,Pesaro e Urbino,PU,250
+14,Molise,70,Campobasso,CB,303
+14,Molise,94,Isernia,IS,451
+1,Piemonte,6,Alessandria,AL,182
+1,Piemonte,5,Asti,AT,155
+1,Piemonte,96,Biella,BI,1811
+1,Piemonte,4,Cuneo,CN,785
+1,Piemonte,3,Novara,NO,562
+1,Piemonte,1,Torino,TO,504
+1,Piemonte,103,Verbano-Cusio-Ossola,VB,454
+1,Piemonte,2,Vercelli,VC,337
+16,Puglia,72,Bari,BA,366
+16,Puglia,110,Barletta-Andria-Trani,BT,249
+16,Puglia,74,Brindisi,BR,1101
+16,Puglia,71,Foggia,FG,627
+16,Puglia,75,Lecce,LE,285
+16,Puglia,73,Taranto,TA,203
+20,Sardegna,92,Cagliari,CA,1756
+20,Sardegna,91,Nuoro,NU,216
+20,Sardegna,95,Oristano,OR,232
+20,Sardegna,90,Sassari,SS,429
+20,Sardegna,111,Sud Sardegna,SU,780
+19,Sicilia,84,Agrigento,AG,248
+19,Sicilia,85,Caltanissetta,CL,1094
+19,Sicilia,87,Catania,CT,360
+19,Sicilia,86,Enna,EN,374
+19,Sicilia,83,Messina,ME,273
+19,Sicilia,82,Palermo,PA,328
+19,Sicilia,88,Ragusa,RG,154
+19,Sicilia,89,Siracusa,SR,271
+19,Sicilia,81,Trapani,TP,523
+9,Toscana,51,Arezzo,AR,411
+9,Toscana,48,Firenze,FI,1831
+9,Toscana,53,Grosseto,GR,339
+9,Toscana,49,Livorno,LI,392
+9,Toscana,46,Lucca,LU,167
+9,Toscana,45,Massa-Carrara,MS,156
+9,Toscana,50,Pisa,PI,180
+9,Toscana,47,Pistoia,PT,1020
+9,Toscana,100,Prato,PO,170
+9,Toscana,52,Siena,SI,223
+4,Trentino-Alto Adige/Südtirol,21,Bolzano/Bozen,BZ,275
+4,Trentino-Alto Adige/Südtirol,22,Trento,TN,374
+10,Umbria,54,Perugia,PG,947
+10,Umbria,55,Terni,TR,1425
+2,Valle d'Aosta/Vallée d'Aoste,7,Valle d'Aosta/Vallée d'Aoste,AO,369
+5,Veneto,25,Belluno,BL,152
+5,Veneto,28,Padova,PD,2066
+5,Veneto,29,Rovigo,RO,588
+5,Veneto,26,Treviso,TV,457
+5,Veneto,27,Venezia,VE,596
+5,Veneto,23,Verona,VR,240
+5,Veneto,24,Vicenza,VI,638
