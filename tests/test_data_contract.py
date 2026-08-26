@@ -185,8 +185,8 @@ class TestEntitiesExport:
         assert set(HARMONIZATION) <= abbrs
 
     def test_vao_region_quirk_is_preserved(self, entities: dict[str, Any]) -> None:
-        # The source emits "VAO" for Valle d'Aosta; the export keeps it so
-        # the notebook's region alias handling runs on real input.
+        # The export carries "VAO" for Valle d'Aosta, so the notebook's
+        # region alias handling runs on real input.
         region_codes = {item["region_code"] for item in entities["items"]}
         assert "VAO" in region_codes
         assert "VDA" not in region_codes

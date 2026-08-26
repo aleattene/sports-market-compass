@@ -12,11 +12,11 @@ granularity: area-level values (16 federation-inspired areas), never
 fine-grained sport labels. Generation is deterministic (fixed seed):
 re-running the script reproduces the committed sample exactly.
 
-The sample also reproduces two quirks of the real source, so the
+The sample also reproduces two quirks of the collected data, so the
 harmonization step documented in the notebook exercises real logic instead
 of a no-op:
 - a few Sardinian entities carry province codes abolished by the 2016
-  reform (CI, OG, OT): the source keeps the code each entity was
+  reform (CI, OG, OT): the export keeps the code each entity was
   registered under;
 - Valle d'Aosta entities carry the non-standard region code "VAO".
 
@@ -53,7 +53,7 @@ N_ENTITIES: int = 2000
 
 # Standard region abbreviations (public facts), keyed by the region names
 # used in the boundary file. Valle d'Aosta is emitted as "VAO" at generation
-# time to mirror the real source quirk the notebook harmonizes.
+# time to mirror the quirk in the collected data the notebook harmonizes.
 REGION_NAME_TO_CODE: dict[str, str] = {
     "Abruzzo": "ABR",
     "Basilicata": "BAS",
@@ -169,7 +169,7 @@ def build_entities(
     for prov in rng.choices(provinces, weights=weights, k=N_ENTITIES):
         region_code: str = REGION_NAME_TO_CODE[prov["reg_name"]]
         if region_code == "VDA":
-            region_code = "VAO"  # real source quirk, harmonized downstream
+            region_code = "VAO"  # quirk of the collected data, harmonized downstream
 
         n_areas: int = rng.choices((1, 2, 3), weights=(70, 22, 8))[0]
         items.append(
@@ -201,10 +201,10 @@ def build_entities(
 
 
 def aggregate_platform(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Aggregate entities per province, mirroring the pipeline's step 02.
+    """Aggregate entities per province, mirroring the pipeline's aggregation step.
 
     Applies the same harmonization the pipeline applies, so the sample counts
-    CSV — like the real one — contains only current province codes.
+    CSV, like the real one, contains only current province codes.
 
     :param items: entity-level sample
     :return: one row per province, sorted by province_abbr
