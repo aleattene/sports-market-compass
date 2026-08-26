@@ -101,8 +101,12 @@ sports-market-compass/
 ├── data_sample/                          # synthetic sample (real geography, auto-generated values)
 ├── scripts/
 │   └── generate_data_sample.py           # synthetic sample generator
+├── tests/
+│   └── test_data_contract.py             # data contract tests on the sample
 ├── data/                                 # real dataset (gitignored, optional)
 ├── requirements.txt                      # project dependencies
+├── .github/
+│   └── workflows/ci.yml                  # CI: hygiene, determinism, tests, notebook
 └── .pre-commit-config.yaml               # nbstripout: notebook outputs never in history
 ```
 
