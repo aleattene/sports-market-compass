@@ -1,0 +1,10 @@
+# Analysis stack for notebooks/01_coverage_gap_analysis.ipynb
+pandas>=2.0
+numpy>=1.26
+matplotlib>=3.8
+seaborn>=0.13
+geopandas>=1.0
+jupyter>=1.0
+
+# Dev: notebook hygiene before committing (see .pre-commit-config.yaml)
+pre-commit>=3.5

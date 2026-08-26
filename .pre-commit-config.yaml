@@ -1,0 +1,10 @@
+# Strips notebook outputs before every commit.
+# The notebook may have been executed locally on real data,
+# and no real value must ever reach the public history.
+# One-time setup after cloning repository: pre-commit install
+repos:
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.8.1
+    hooks:
+      - id: nbstripout
+        args: [--drop-empty-cells]
