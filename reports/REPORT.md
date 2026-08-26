@@ -229,7 +229,7 @@ Brescia) as the highest-impact first wave of a phased growth strategy.
 
 Explore the data interactively on Looker Studio:
 
-[Open the Looker Studio Dashboard](https://lookerstudio.google.com/s/tDAIpFPxjls)
+[Open the Looker Studio Dashboard](https://datastudio.google.com/s/tDAIpFPxjls)
 
 > Note: the dashboard currently reflects an earlier snapshot of the analysis and is being aligned to the present
 > one. A Google account may be required.

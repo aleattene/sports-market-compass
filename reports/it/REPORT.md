@@ -234,7 +234,7 @@ Napoli, Brescia) come prima ondata a maggiore impatto di una strategia di cresci
 
 Esplora i dati in modo interattivo su Looker Studio:
 
-[Apri la Dashboard Looker Studio](https://lookerstudio.google.com/s/tDAIpFPxjls)
+[Apri la Dashboard Looker Studio](https://datastudio.google.com/s/tDAIpFPxjls)
 
 > Nota: la dashboard riflette attualmente uno snapshot precedente dell'analisi ed è in corso di allineamento a quello
 > presente. Potrebbe essere richiesto un account Google.
