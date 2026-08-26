@@ -8,3 +8,6 @@ jupyter>=1.0
 
 # Dev: notebook hygiene before committing (see .pre-commit-config.yaml)
 pre-commit>=3.5
+
+# Dev: data contract tests on the synthetic sample (tests/)
+pytest>=8.0
