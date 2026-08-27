@@ -1,4 +1,4 @@
-# Sports Market Compass 
+# Sports Market Compass <a href="#"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ee-1f1f9.png?v8" width="28" alt="Versione italiana"/></a> <a href="../README.md"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png?v8" width="28" alt="English version"/></a>
 
 ![CI](https://github.com/aleattene/sports-market-compass/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
@@ -218,8 +218,8 @@ Il sample si rigenera con `python scripts/generate_data_sample.py`
 
 <br/>
 
-## Autore
-
+### Autore:
 [Alessandro Attene](https://www.linkedin.com/in/aleattene)
 
-Licenza: vedi [LICENSE](../LICENSE).
+#### Licenza: 
+[MIT](../LICENSE)

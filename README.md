@@ -1,6 +1,18 @@
-# Sports Market Compass  🇬🇧 [🇮🇹](it/README.md)
+# Sports Market Compass <a href="#"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png?v8" width="28" alt="English version"/></a> <a href="it/README.md"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ee-1f1f9.png?v8" width="28" alt="Versione italiana"/></a>
 
-> A compass gives direction: where, what, how much. Not the route.
+![CI](https://github.com/aleattene/sports-market-compass/actions/workflows/ci.yml/badge.svg)
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-blue)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Last Commit](https://img.shields.io/github/last-commit/aleattene/sports-market-compass)
+<!-- [![Coverage](https://codecov.io/gh/aleattene/sports-market-compass/branch/main/graph/badge.svg)]-->
+<!-- (https://codecov.io/gh/aleattene/sports-market-compass) -->
+
+> A compass shows the direction: where, what and how much. Not the route.
+
+---
 
 An analysis of the Italian sports market built on two public sources:
 - the official registry of sports clubs
@@ -8,6 +20,10 @@ An analysis of the Italian sports market built on two public sources:
 
 Hence the fundamental question: of the whole Italian sports market,
 how much is already served by the platform and how much is still to be served?
+
+---
+
+<br/>
 
 ## The analysis, in three acts
 
@@ -24,21 +40,39 @@ investability threshold, attractiveness score (size × gap × sport diversity ×
 registration trend), parametric budget allocator (the amount is not collected
 data but a free parameter, split across provinces in proportion to the score).
 
+---
+
+<br/>
+
+
 ## Key figures
 
 <!-- *Rendered locally from a real collection (see the Data and privacy section).*-->
 
+<br/>
+
 ![Platform coverage across Italian provinces](reports/figures/italy_choropleth.png)
+
+<br/>
 
 ![Coverage gap by region](reports/figures/coverage_gap_by_region_stacked.png)
 
+<br/>
+
 ![Expansion priority matrix](reports/figures/priority_matrix.png)
 
-The remaining figures and the commented results are in the
-[report](reports/REPORT.md).
+<br/>
 
-Interactive dashboard: [Looker Studio](https://datastudio.google.com/s/tDAIpFPxjls)
+A more detailed analysis is available in the **report** and/or the **interactive dashboard**:
+
+- [Executive Report](reports/REPORT.md).
+- [Interactive dashboard (Looker Studio)](https://datastudio.google.com/s/tDAIpFPxjls)
 *(being aligned to the current snapshot)*.
+
+---
+
+<br/>
+
 
 ## Data and privacy
 
@@ -54,6 +88,10 @@ This repository **contains no real dataset**:
   present, otherwise it falls back on the sample: a fresh clone runs
   end-to-end.
 
+---
+
+<br/>
+
 ### Bring your own data
 
 Place these files in `data/` (same schema as the sample):
@@ -65,6 +103,10 @@ Place these files in `data/` (same schema as the sample):
 | `platform_entities.json` | `{dimension, retrieved_at, count, sport_areas[], items:[{sport[], registration_year, province_abbr, region_code}]}` | optional: enables the sport areas and trend sections |
 
 The `sport` field carries **area-level values** (see the first method note).
+
+---
+
+<br/>
 
 ## Method notes and declared limits
 
@@ -86,6 +128,10 @@ once the sources adopt the new layout (which is why no VS entry exists today).
 - **Robust code parsing**. Napoli's abbreviation is literally `NA`: the CSV reads explicitly protect it
 from being parsed as a missing value (pandas' default), which would make it silently vanish from merges and
 labels.
+
+---
+
+<br/>
 
 ## Repository structure
 
@@ -109,6 +155,10 @@ sports-market-compass/
 │   └── workflows/ci.yml                  # CI: hygiene, determinism, tests, notebook
 └── .pre-commit-config.yaml               # nbstripout: notebook outputs never in history
 ```
+
+---
+
+<br/>
 
 ## Reproducibility
 
@@ -164,8 +214,12 @@ jupyter lab notebooks/01_coverage_gap_analysis.ipynb
 The sample regenerates with `python scripts/generate_data_sample.py`
 (deterministic: same seed, same output).
 
-## Author
+---
 
+<br/>
+
+### Author:
 [Alessandro Attene](https://www.linkedin.com/in/aleattene)
 
-License: see [LICENSE](LICENSE).
+#### License:
+[MIT](LICENSE)
