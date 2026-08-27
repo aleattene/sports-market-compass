@@ -1,6 +1,18 @@
-# Sports Market Compass  [🇬🇧](../README.md) 🇮🇹
+# Sports Market Compass 
 
-> La bussola dà la direzione: dove, cosa, quanto. Non la rotta.
+![CI](https://github.com/aleattene/sports-market-compass/actions/workflows/ci.yml/badge.svg)
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-blue)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
+![Last Commit](https://img.shields.io/github/last-commit/aleattene/sports-market-compass)
+<!-- [![Coverage](https://codecov.io/gh/aleattene/sports-market-compass/branch/main/graph/badge.svg)]-->
+<!-- (https://codecov.io/gh/aleattene/sports-market-compass) -->
+
+> La bussola indica la direzione: dove, cosa e quanto. Non la rotta.
+
+---
 
 Analisi del mercato sportivo italiano costruita su due fonti pubbliche:
 - il registro ufficiale delle società sportive
@@ -8,6 +20,10 @@ Analisi del mercato sportivo italiano costruita su due fonti pubbliche:
 
 Da qui la domanda fondamentale: di tutto il mercato sportivo italiano,
 quanto è già servito dalla piattaforma e quanto è ancora da servire?
+
+---
+
+<br/>
 
 ## L'analisi, in tre atti
 
@@ -25,21 +41,39 @@ diversità sport × trend registrazioni), allocatore parametrico di budget
 (l'importo non è un dato raccolto ma un parametro libero, ripartito tra le
 province in proporzione allo score).
 
+---
+
+<br/>
+
+
 ## Le figure chiave
 
 <!-- *Renderizzate in locale da una raccolta reale (vedi la sezione Dati e privacy).*-->
 
+<br/>
+
 ![Copertura della piattaforma nelle province italiane](../reports/figures/it/italy_choropleth.png)
+
+<br/>
 
 ![Gap di copertura per regione](../reports/figures/it/coverage_gap_by_region_stacked.png)
 
+<br/>
+
 ![Matrice di priorità di espansione](../reports/figures/it/priority_matrix.png)
 
-Il resto delle figure e i risultati commentati sono nel
-[report](../reports/it/REPORT.md).
+<br/>
 
-Dashboard interattiva: [Looker Studio](https://datastudio.google.com/s/tDAIpFPxjls)
+Un'analisi più dettagliata è presente nel **report** e/o nella **dashboard interattiva**:
+
+- [Executive Report](../reports/it/REPORT.md).
+- [Dashboard interattiva (Looker Studio)](https://datastudio.google.com/s/tDAIpFPxjls)
 *(in corso di allineamento allo snapshot corrente)*.
+
+---
+
+<br/>
+
 
 ## Dati e privacy
 
@@ -54,6 +88,10 @@ Questo repository **non contiene alcun dataset reale**:
 - a runtime il notebook carica `data/` (i tuoi dati, gitignored) se presente,
   altrimenti ripiega sul sample: un clone fresco gira end-to-end.
 
+---
+
+<br/>
+
 ### Porta i tuoi dati
 
 Metti questi file in `data/` (schema identico al sample):
@@ -65,6 +103,10 @@ Metti questi file in `data/` (schema identico al sample):
 | `platform_entities.json` | `{dimension, retrieved_at, count, sport_areas[], items:[{sport[], registration_year, province_abbr, region_code}]}` | opzionale: abilita le sezioni aree sportive e trend |
 
 Il campo `sport` contiene **valori a livello di area** (vedi la prima nota di metodo).
+
+---
+
+<br/>
 
 ## Note di metodo e limiti dichiarati
 
@@ -86,6 +128,10 @@ la recepiranno (per questo oggi non esiste una voce VS).
 - **Parsing robusto dei codici**. La sigla di Napoli è letteralmente `NA`: le letture CSV la proteggono esplicitamente
 dall'essere interpretata come valore mancante (default di pandas), che la farebbe sparire in silenzio da merge ed
 etichette.
+
+---
+
+<br/>
 
 ## Struttura del repository
 
@@ -109,6 +155,10 @@ sports-market-compass/
 │   └── workflows/ci.yml                  # CI: igiene, determinismo, test, notebook
 └── .pre-commit-config.yaml               # nbstripout: mai output di notebook nella history
 ```
+
+---
+
+<br/>
 
 ## Riproducibilità
 
@@ -163,6 +213,10 @@ jupyter lab notebooks/01_coverage_gap_analysis.ipynb
 
 Il sample si rigenera con `python scripts/generate_data_sample.py`
 (deterministico: stesso seed, stesso output).
+
+---
+
+<br/>
 
 ## Autore
 
