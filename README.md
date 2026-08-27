@@ -44,6 +44,19 @@ data but a free parameter, split across provinces in proportion to the score).
 
 <br/>
 
+## Project status
+
+- [x] **Milestone 01**: coverage gap analysis (notebook, bilingual report,
+  synthetic sample, data contract tests, CI)
+- [ ] **Looker Studio dashboard alignment** to the current snapshot
+  (expected in September 2026)
+- [ ] **Milestone 02**: investability threshold and attractiveness score
+- [ ] **Milestone 03**: parametric budget allocator
+
+---
+
+<br/>
+
 
 ## Key figures
 

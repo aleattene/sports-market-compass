@@ -45,6 +45,19 @@ province in proporzione allo score).
 
 <br/>
 
+## Stato del progetto
+
+- [x] **Milestone 01**: analisi del gap di copertura (notebook, report
+  bilingue, sample sintetico, test di contratto dati, CI)
+- [ ] **Allineamento della dashboard Looker Studio** allo snapshot corrente
+  (previsto a settembre 2026)
+- [ ] **Milestone 02**: soglia di investibilità e attractiveness score
+- [ ] **Milestone 03**: allocatore parametrico di budget
+
+---
+
+<br/>
+
 
 ## Le figure chiave
 
