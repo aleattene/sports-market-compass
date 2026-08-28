@@ -1,4 +1,4 @@
-# Sports Market Compass • Report Esecutivo   [🇬🇧](../REPORT.md) 🇮🇹
+# Sports Market Compass • Report Esecutivo <a href="#"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ee-1f1f9.png?v8" width="28" alt="Versione italiana"/></a> <a href="../README.md"><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f1ec-1f1e7.png?v8" width="28" alt="English version"/></a>
 
 ## Sintesi Esecutiva
 
